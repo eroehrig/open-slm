@@ -1,0 +1,42 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool.poetry]
+name = "default"
+version = "1.0.0"
+description = "default"
+authors = ["JUST ADD AI GmbH"]
+
+[[tool.poetry.source]]
+name = "jypi"
+url = "https://storage.justadd.ai/jypi/simple/"
+secondary = true
+
+[tool.poetry.dependencies]
+python = "~=3.10.10"
+jupyterlab = "*"
+pymongo = "*"
+ipywidgets = "*"
+tqdm = "*"
+matplotlib = "*"
+pydantic = "*"
+jython-logging = "*"
+transformers="*"
+datasets="2.19.1"
+snac="*"
+soundfile="*"
+torchaudio = "^2.3.0"
+sentence_transformers="*"
+accelerate="*"
+protobuf="*"
+
+[tool.poetry.dev-dependencies]
+black = "~=22.3.0"
+httpx = "~=0.23.3"
+pytest = "~=6.2"
+pytest-cov = "~=3.0"
+pre-commit = "~=2.13"
+
+[tool.black]
+line-length = 116
